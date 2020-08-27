@@ -1,0 +1,56 @@
+{
+  "name": "@ispa.io/vquill",
+  "version": "1.0.0",
+  "description": "A Vue component used for rich text editor with Quill JS.",
+  "main": "src/index.js",
+  "dependencies": {
+    "quill": "^1.3.7"
+  },
+  "devDependencies": {
+    "css-loader": "^4.2.2",
+    "style-loader": "^1.2.1",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-es2015": "^6.24.1",
+    "vue": "^2.6.10",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "scripts": {
+    "dev": "node_modules/webpack/bin/webpack.js --mode production --watch --progress",
+    "build": "node_modules/webpack/bin/webpack.js --mode production --progress"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:vue/recommended"
+    ],
+    "rules": {
+      "vue/no-unused-vars": "error"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malayvuong/vquill.git"
+  },
+  "keywords": [
+    "vuejs",
+    "quill js",
+    "vquill",
+    "rich text editor",
+    "vue quill"
+  ],
+  "peerDependencies": {
+    "vue": "^2.0.0"
+  },
+  "author": "Malayvuong <malayvuong@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/malayvuong/vquill/issues"
+  },
+  "homepage": "https://github.com/malayvuong/vquill#readme"
+}

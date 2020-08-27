@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test VRCODE</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="../dist/vquill.js"></script>
+  <style>
+    body{background: #efefef; color: black;}
+  </style>
+</head>
+<body>
+  <div id="app">
+    <center>
+      <div style="border: 1px solid #ccc; margin-bottom: 15px; padding: 15px;" v-html="text"></div>
+    </center>
+    <vquill
+      v-model="text"
+      :toolbar="toolbar"
+      placeholder="Place a text"
+    ></vquill>
+  </div>
+<script>
+var app = new Vue({
+    el: '#app',
+    data: {
+      text: 'Hello User! Let\'s scan me!',
+
+      toolbar: [
+        ['bold', 'italic', 'underline', 'strike'],
+        [{ 'align': [] }],
+        [{ 'color': [] }, { 'background': [] }],
+        ['blockquote', 'code-block'],
+        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+        [{ 'script': 'sub' }, { 'script': 'super' }],
+        [{ 'indent': '-1' }, { 'indent': '+1' }],
+        [{ 'direction': 'rtl' }],
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+      ],
+    },
+})
+</script>
+</body>
+</html>
