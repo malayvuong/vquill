@@ -23,7 +23,22 @@ export default {
     //  disabled status
     disabled: { type: Boolean, default: false },
     //  Toolbar needed
-    toolbar: { type: Array, default: [], },
+    toolbar: { type: Array, default: [
+      ['bold', 'italic', 'underline', 'strike'],
+      ['blockquote', 'code-block'],
+      [{ 'header': 1 }, { 'header': 2 }],
+      [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+      [{ 'script': 'sub' }, { 'script': 'super' }],
+      [{ 'indent': '-1' }, { 'indent': '+1' }],
+      [{ 'direction': 'rtl' }],
+      [{ 'size': ['small', false, 'large', 'huge'] }],
+      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+      [{ 'color': [] }, { 'background': [] }],
+      [{ 'font': [] }],
+      [{ 'align': [] }],
+      ['clean'],
+      ['link', 'image', 'video']
+    ], },
     //  Textarea placeholder
     placeholder: { type: String, default: 'Type your text content...' },
     //  Themes of Quill
@@ -124,7 +139,7 @@ export default {
           let html = v.$refs.editor.children[0].innerHTML
           const quill = v.quill
           const text = v.quill.getText()
-          if (html.length == 11) html = ''
+          if (html === '<p><br></p>') html = ''
           v.innerValue = html
           v.$emit('input', v.innerValue)
           v.$emit('change', { html, text, quill })

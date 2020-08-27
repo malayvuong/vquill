@@ -1,6 +1,6 @@
 {
   "name": "@ispa.io/vquill",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A Vue component used for rich text editor with Quill JS.",
   "main": "src/index.js",
   "dependencies": {
@@ -25,28 +25,18 @@
     "dev": "node_modules/webpack/bin/webpack.js --mode production --watch --progress",
     "build": "node_modules/webpack/bin/webpack.js --mode production --progress"
   },
-  "eslintConfig": {
-    "extends": [
-      "plugin:vue/recommended"
-    ],
-    "rules": {
-      "vue/no-unused-vars": "error"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/malayvuong/vquill.git"
   },
   "keywords": [
-    "vuejs",
-    "quill js",
     "vquill",
-    "rich text editor",
-    "vue quill"
+    "vuejs",
+    "vue",
+    "quill",
+    "editor",
+    "quill-editor"
   ],
-  "peerDependencies": {
-    "vue": "^2.0.0"
-  },
   "author": "Malayvuong <malayvuong@gmail.com>",
   "license": "MIT",
   "bugs": {

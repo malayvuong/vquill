@@ -3,3 +3,4 @@ npm-debug.log
 yarn-error.log
 webpack.config.js
 package-lock.json
+.DS_Store
